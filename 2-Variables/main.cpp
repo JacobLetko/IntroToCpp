@@ -4,6 +4,7 @@
 #include "CelsiusToFahrenheit.h"
 #include "Problems.h"
 #include "NumberSwap.h"
+#include "FunFactsForYourAge.h"
 
 /*
 int age;
@@ -21,7 +22,7 @@ int gandhi_aggression;
 int main()
 {
 
-	A();
+	/*A();
 	system("pause");
 	B();
 	system("pause");
@@ -44,6 +45,9 @@ int main()
 	system("pause");
 
 	numswap();
+	system("pause");*/
+
+	age();
 	system("pause");
 
 	return 0;

@@ -1,0 +1,17 @@
+#pragma once
+#include <iostream>
+
+inline int EvenOrOdd()
+{
+	
+	std::cout << "please enter a whole number" << std::endl;
+	int num;
+	std::cin >> num;
+
+	if (num % 2)
+		std::cout << num << " is odd" << std::endl;
+	else
+		std::cout << num << " is even" << std::endl;
+
+	return 0;
+}
