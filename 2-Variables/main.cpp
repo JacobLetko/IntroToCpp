@@ -22,7 +22,7 @@ int gandhi_aggression;
 int main()
 {
 
-	/*A();
+	A();
 	system("pause");
 	B();
 	system("pause");
@@ -45,7 +45,7 @@ int main()
 	system("pause");
 
 	numswap();
-	system("pause");*/
+	system("pause");
 
 	age();
 	system("pause");

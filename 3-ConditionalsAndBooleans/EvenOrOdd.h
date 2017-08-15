@@ -8,7 +8,7 @@ inline int EvenOrOdd()
 	int num;
 	std::cin >> num;
 
-	if (num % 2)
+	if (num % 2) //comes out as 0 if even making it false
 		std::cout << num << " is odd" << std::endl;
 	else
 		std::cout << num << " is even" << std::endl;

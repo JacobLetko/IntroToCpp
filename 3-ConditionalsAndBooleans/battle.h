@@ -19,7 +19,7 @@ inline int battle()
 	else if (choices > 9)
 		fo++;
 
-	std::cout << "what did you take to battle with you?" << std::endl << "1) a sack of potatos" << std::endl << "2) an invisibility cape" << std::endl << "3) the mango blade" << std::endl;
+	std::cout << "what did you take to battle with you?\n1) a sack of potatos\n2) an invisibility cape\n3) the mango blade" << std::endl;
 	std::cin >> choices;
 	if (choices == 1)
 		dino++;
