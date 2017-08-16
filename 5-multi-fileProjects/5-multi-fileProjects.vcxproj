@@ -110,6 +110,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="dtgreet.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mathutils.cpp" />
+    <ClCompile Include="rng.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dtgreet.h" />
+    <ClInclude Include="mathutils.h" />
+    <ClInclude Include="rng.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -12,7 +12,7 @@
 
 int main()
 {
-	/*std::cout << (1, 2, 3);
+	std::cout << (1, 2, 3);
 	system("pause");
 	std::cout << Min(1, 2);
 	system("pause");
@@ -35,7 +35,7 @@ int main()
 	std::cout << clamp(1, 2, 3);
 	system("pause");
 	start();
-	system("pause");*/
+	system("pause");
 	cap();
 	system("pause");
 	
