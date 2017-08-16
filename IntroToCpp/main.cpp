@@ -4,7 +4,7 @@
 
 int main()
 {
-	std::cout << "Hello AIE" << std::endl;
+	std::cout << "Hello AIE!!!!!" << std::endl;
 
 	system("pause");
 
