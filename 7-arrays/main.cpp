@@ -22,7 +22,7 @@ int main()
 	LargestValue(numbers, size);
 
 	findIndex(numbers, size, 4);
-	uniqueness(numbers, size, numbers, size);
+	uniqueness(numbers, size);
 	reverse(numbers, size);
 	ascendSort(numbers, size);
 	descendSort(numbers, size);

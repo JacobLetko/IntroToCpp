@@ -14,11 +14,11 @@ int findIndex(int numbers[], int size, int value)
 	return -1;
 }
 
-bool uniqueness(int numbers[], int size, int num[], int size2)
+bool uniqueness(int numbers[], int size)
 {
 	for (int i = 0; i < size; i++)
-		for (int j = 0; j < size2; j++)
-			if (numbers[i] == num[j])
+		for (int j = 0; j < size; j++)
+			if (numbers[i] == numbers[j] && i != j)
 				return false;
 	return true;
 }

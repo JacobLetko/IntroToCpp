@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1-HelloAIE", "IntroToCpp\IntroToCpp.vcxproj", "{20870172-5BC5-4122-A933-3932AEB0F3B7}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2-Variables", "2-Variables\2-Variables.vcxproj", "{A6140569-99C0-42DA-BEE7-E235C7F8F176}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3-ConditionalsAndBooleans", "3-ConditionalsAndBooleans\3-ConditionalsAndBooleans.vcxproj", "{E990A4F1-1878-4915-B036-56BD028509B3}"
@@ -19,6 +17,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6-Loops", "6-Loops\6-Loops.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "7-arrays", "7-arrays\7-arrays.vcxproj", "{C198643F-5722-4F3B-9FF2-ADA37C364BFC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "8-structsAndPlainOIData(POD)", "8-structsAndPlainOIData(POD)\8-structsAndPlainOIData(POD).vcxproj", "{317E0808-32D5-4DE7-9A03-F3BE81D45252}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1-HelloAIE", "1-HelloAIE\IntroToCpp.vcxproj", "{20870172-5BC5-4122-A933-3932AEB0F3B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -27,14 +29,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{20870172-5BC5-4122-A933-3932AEB0F3B7}.Debug|x64.ActiveCfg = Debug|x64
-		{20870172-5BC5-4122-A933-3932AEB0F3B7}.Debug|x64.Build.0 = Debug|x64
-		{20870172-5BC5-4122-A933-3932AEB0F3B7}.Debug|x86.ActiveCfg = Debug|Win32
-		{20870172-5BC5-4122-A933-3932AEB0F3B7}.Debug|x86.Build.0 = Debug|Win32
-		{20870172-5BC5-4122-A933-3932AEB0F3B7}.Release|x64.ActiveCfg = Release|x64
-		{20870172-5BC5-4122-A933-3932AEB0F3B7}.Release|x64.Build.0 = Release|x64
-		{20870172-5BC5-4122-A933-3932AEB0F3B7}.Release|x86.ActiveCfg = Release|Win32
-		{20870172-5BC5-4122-A933-3932AEB0F3B7}.Release|x86.Build.0 = Release|Win32
 		{A6140569-99C0-42DA-BEE7-E235C7F8F176}.Debug|x64.ActiveCfg = Debug|x64
 		{A6140569-99C0-42DA-BEE7-E235C7F8F176}.Debug|x64.Build.0 = Debug|x64
 		{A6140569-99C0-42DA-BEE7-E235C7F8F176}.Debug|x86.ActiveCfg = Debug|Win32
@@ -91,6 +85,22 @@ Global
 		{C198643F-5722-4F3B-9FF2-ADA37C364BFC}.Release|x64.Build.0 = Release|x64
 		{C198643F-5722-4F3B-9FF2-ADA37C364BFC}.Release|x86.ActiveCfg = Release|Win32
 		{C198643F-5722-4F3B-9FF2-ADA37C364BFC}.Release|x86.Build.0 = Release|Win32
+		{317E0808-32D5-4DE7-9A03-F3BE81D45252}.Debug|x64.ActiveCfg = Debug|x64
+		{317E0808-32D5-4DE7-9A03-F3BE81D45252}.Debug|x64.Build.0 = Debug|x64
+		{317E0808-32D5-4DE7-9A03-F3BE81D45252}.Debug|x86.ActiveCfg = Debug|Win32
+		{317E0808-32D5-4DE7-9A03-F3BE81D45252}.Debug|x86.Build.0 = Debug|Win32
+		{317E0808-32D5-4DE7-9A03-F3BE81D45252}.Release|x64.ActiveCfg = Release|x64
+		{317E0808-32D5-4DE7-9A03-F3BE81D45252}.Release|x64.Build.0 = Release|x64
+		{317E0808-32D5-4DE7-9A03-F3BE81D45252}.Release|x86.ActiveCfg = Release|Win32
+		{317E0808-32D5-4DE7-9A03-F3BE81D45252}.Release|x86.Build.0 = Release|Win32
+		{20870172-5BC5-4122-A933-3932AEB0F3B7}.Debug|x64.ActiveCfg = Debug|x64
+		{20870172-5BC5-4122-A933-3932AEB0F3B7}.Debug|x64.Build.0 = Debug|x64
+		{20870172-5BC5-4122-A933-3932AEB0F3B7}.Debug|x86.ActiveCfg = Debug|Win32
+		{20870172-5BC5-4122-A933-3932AEB0F3B7}.Debug|x86.Build.0 = Debug|Win32
+		{20870172-5BC5-4122-A933-3932AEB0F3B7}.Release|x64.ActiveCfg = Release|x64
+		{20870172-5BC5-4122-A933-3932AEB0F3B7}.Release|x64.Build.0 = Release|x64
+		{20870172-5BC5-4122-A933-3932AEB0F3B7}.Release|x86.ActiveCfg = Release|Win32
+		{20870172-5BC5-4122-A933-3932AEB0F3B7}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
