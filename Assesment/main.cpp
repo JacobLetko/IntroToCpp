@@ -1,94 +1,140 @@
 #include <iostream>
+#include <Windows.h>
 
 #include "Battle.h"
 #include "level.h"
+#include "textanimations.h"
+
+
 
 int menue()
 {
 	int answer;
-	std::cout << "what would you like to do?" << std::endl;
-	std::cout << " 1) fight" << std::endl;
-	std::cout << " 2) rest" << std::endl;
-	std::cout << " 3) stats" << std::endl;
-	std::cout << " 4) quit game" << std::endl;
+	delay(20, " What would you like to do?");
+	std::cout << "\n";
+	std::cout << "\n";
+	delay(20, " 1) fight");
+	std::cout << "\n";
+	delay(20, " 2) rest");
+	std::cout << "\n";
+	delay(20, " 3) stats");
+	std::cout << "\n";
+	delay(20, " 4) quit game");
+	std::cout << "\n";
 	std::cin >> answer;
-	std::cout << "\n" << std::endl;
 
 	return answer;
 }
 
 int main()
 {
+	
 	bool play = true;
 	int option;
+
+	SetConsoleTitle("The Arena");
 
 	stats player;
 	player.EXP = 0;
 	
+	delay(100, "Welcome to the");
+	colorFunction(4);
+	std::cout << "\n" << std::endl;
+	delay(20, "         (            )          " );
+	std::cout << "" << std::endl;
+	delay(20,"   (      )\\ )      ( /(   (      ");
+	std::cout << "" << std::endl;
+	delay(20, "   )\\    (()/( (    )\\())  )\\     ");
+	std::cout << "" << std::endl;
+	delay(20, "((((_)(   /(_)))\\  ((_)\\((((_)(   ");
+	std::cout << "" << std::endl;
+	delay(20, " )\ _ )\\ (_)) ((_)  _((_))\\ _ )\\  ");
+	std::cout << "" << std::endl;
+	delay(20, " (_)_\\(_)| _ \\| __|| \\| |(_)_\\(_) ");
+	std::cout << "" << std::endl;
+	delay(20, "  / _ \\  |   /| _| | .` | / _ \\   ");
+	std::cout << "" << std::endl;
+	delay(20, " /_/ \\_\\ |_|_\\|___||_|\\_|/_/ \\_\\  ");
+	std::cout << "\n" << std::endl;
 
 	void startUp();
 	{
+		colorFunction(1);
 		int answer;
-		std::cout << "What class would you like? \n 1) wizard \n 2) rouge \n 3) warrior"<< std::endl;
+		delay(20, " What class would you like?");
+		std::cout << "\n";
+		delay(20, " 1) Wizzard");
+		std::cout << "\n";
+		delay(20, " 2) Rouge");
+		std::cout << "\n";
+		delay(20, " 3) Warrior");
+		std::cout << "\n";
 		std::cin >> answer;
 
 		if (answer == 1)
 		{
-			player.playerClass = "wizzard";
-			player.ATK = 2;
+			player.playerClass = " Wizzard";
+			player.ATK = 1;
 			player.DEF = 2;
 			player.intel = 10;
 			player.maxHP = 5;
 		}
 		else if (answer == 2)
 		{
-			player.playerClass = "rouge";
+			player.playerClass = " Rouge";
 			player.ATK = 10;
 			player.DEF = 2;
-			player.intel = 2;
+			player.intel = 1;
 			player.maxHP = 5;
 		}
 		else if (answer == 3)
 		{
-			player.playerClass = "warrior";
+			player.playerClass = " Warrior";
 			player.ATK = 5;
-			player.DEF = 3;
-			player.intel = 1;
-			player.maxHP = 7;
+			player.DEF = 5;
+			player.intel = 0;
+			player.maxHP = 5;
 		}
 		player.remaingHP = player.maxHP;
 		player.LVL = 1;
 	}
 
 	stats enemy;
-	enemy.LVL = player.LVL / 2 + 1;
-	enemy.ATK = enemy.LVL / 2 + 3;
-	enemy.DEF = enemy.LVL / 2 + 1;
-	enemy.maxHP = enemy.LVL / 2 + 10;
-	enemy.remaingHP = enemy.maxHP;
+	
 
 	while (play)
 	{
+		enemy.LVL = player.LVL / 2 + 1;
+		enemy.ATK = enemy.LVL + 3;
+		enemy.DEF = enemy.LVL + 1;
+		enemy.maxHP = enemy.LVL + 10;
+		enemy.remaingHP = enemy.maxHP;
+		
 		std::cout << "\n" << std::endl;
 		option = menue();
 		
 		if (option == 1)
 		{
 			player.EXP += fight(player, enemy);
-			if (player.EXP >= ((player.LVL / 2) * 8))
+			if (player.EXP >= ((player.LVL / 2) + player.LVL * 8))
 			{
 				lvlUp(player);
 			}
 		}
 		else if (option == 2)
 		{
-			std::cout << "you have regaind all health" << std::endl;
+			Sleep(1500);
+			std::cout << "\n";
+			delay(20, " You have regaind all health");
+			std::cout << "\n";
 			player.remaingHP = player.maxHP;
 		}
 		else if (option == 3)
 			status(player);
 		else if (option == 4)
 			play = false;
+		else if (option == 10)
+			status(enemy);
 			
 	}
 
