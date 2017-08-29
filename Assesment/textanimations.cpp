@@ -19,3 +19,13 @@ void delay(int delay, std::string text)//prints each char slowly in a string
 		Sleep(delay);
 	}
 }
+
+void test(int x, int y) // test colors between ciertin numbers
+{
+	for (int i = x; i <= y; i++)
+	{
+		colorFunction(i);
+		delay(60, "test ");
+		std::cout << i << std::endl;
+	}
+}

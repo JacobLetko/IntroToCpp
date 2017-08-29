@@ -8,6 +8,7 @@ int math(stats &player, int attack)
 	if (attack == 1) 
 	{
 		delay(20, " You attack");
+		std::cout << "\n";
 		return player.ATK;
 	}
 	else if (attack == 2) 
@@ -19,11 +20,11 @@ int math(stats &player, int attack)
 	{
 		
 		delay(20, " You use power attack and lose ");
-		std::cout <<  player.LVL / 2  << std::endl;
+		std::cout <<  player.LVL / 2 + 1;
 		delay(20, " HP");
 		std::cout << "\n";
-		player.remaingHP -= player.LVL / 2;
-		return player.ATK + player.LVL^2;
+		player.remaingHP -= player.LVL / 2 + 1;
+		return player.ATK + player.LVL;
 	}
 	else if (attack == 4) 
 	{
@@ -36,15 +37,27 @@ int math(stats &player, int attack)
 
 void status(stats player, stats enemy)
 {
+	colorFunction(160);
 	delay(20, " Player");
+	colorFunction(0);
 	std::cout << "\n";
-	delay(20, " HP : "); std::cout << player.remaingHP << std::endl;
+	colorFunction(160);
+	delay(20, " HP : "); 
+	std::cout << player.remaingHP;
+	colorFunction(0);
+	std::cout << "\n";
 
 	std::cout << "\n" << std::endl;
 
+	colorFunction(192);
 	delay(20," Enemy");
+	colorFunction(0);
 	std::cout << "\n";
-	delay(20, " HP : "); std::cout << enemy.remaingHP << std::endl;
+	colorFunction(192);
+	delay(20, " HP : "); 
+	std::cout << enemy.remaingHP;
+	colorFunction(0);
+	std::cout << "\n";
 }
 
 int fight(stats &player, stats enemy)
@@ -58,6 +71,7 @@ int fight(stats &player, stats enemy)
 	{
 		status(player, enemy);
 		
+		colorFunction(10);
 		int option;
 		std::cout << "\n";
 		delay(20, " what would you like to do?");
@@ -119,14 +133,20 @@ int fight(stats &player, stats enemy)
 
 		if (enemy.remaingHP <= 0 && player.remaingHP > 0)
 		{
+			colorFunction(160);
 			delay(20, " You won");
+			colorFunction(0);
 			std::cout << "\n";
+			player.win++;
 			xp += enemy.LVL * 5;
 		}
 		else if (player.remaingHP <= 0 && enemy.remaingHP > 0)
 		{
+			colorFunction(192);
 			delay(20, " You lose");
+			colorFunction(0);
 			std::cout << "\n";
+			player.lose++;
 			xp = 0;
 		}
 	}

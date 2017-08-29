@@ -18,27 +18,30 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Battle.cpp">
+    <ClCompile Include="greeting.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="level.cpp">
+    <ClCompile Include="palindrome.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="textanimations.cpp">
+    <ClCompile Include="pigLatin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="titleGen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Battle.h">
+    <ClInclude Include="greeting.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="level.h">
+    <ClInclude Include="palindrome.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="textanimations.h">
+    <ClInclude Include="pigLatin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="moves.h">
+    <ClInclude Include="titleGen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

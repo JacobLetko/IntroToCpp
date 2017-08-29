@@ -5,7 +5,7 @@
 
 void statsUp(stats &player, int up)
 {
-	player.EXP -= (player.LVL / 2) + player.LVL * 8;
+	player.EXP -= player.expneeded;
 	player.LVL++;
 
 	if (up == 1)
@@ -16,11 +16,17 @@ void statsUp(stats &player, int up)
 		player.maxHP++;
 	else if (up == 4)
 		player.intel++;
+	player.ATK++;
+	player.DEF++;
+	player.intel++;
+	player.maxHP++;
 	status(player);
 }
 
 void status(stats player)
 {
+	colorFunction(5);
+	std::cout << "\n";
 	delay(20, " You are a "); 
 	delay(20, player.playerClass);
 	std::cout << "\n";
@@ -29,7 +35,7 @@ void status(stats player)
 	delay(20, " exp : ");
 	std::cout << player.EXP << std::endl;
 	delay(20, " Amount of exp needed to level up : ");
-	std::cout << (player.LVL / 2) + player.LVL * 8 << std::endl;
+	std::cout << player.expneeded << std::endl;
 	delay(20, " Max HP : ");
 	std::cout << player.maxHP << std::endl;
 	delay(20, " Current HP : ");
@@ -40,11 +46,17 @@ void status(stats player)
 	std::cout << player.DEF << std::endl;
 	delay(20, " Intelligence : ");
 	std::cout << player.intel << std::endl;
+	delay(20, " fights won : ");
+	std::cout << player.win << std::endl;
+	delay(20, " fights lost : ");
+	std::cout << player.lose << std::endl;
 }
 
 void lvlUp(stats &player)
 {
 	int answer;
+	colorFunction(5);
+	std::cout << "\n";
 	delay(20," What are you upgrading?");
 	std::cout << "\n";
 	delay(20, " 1) Attack");

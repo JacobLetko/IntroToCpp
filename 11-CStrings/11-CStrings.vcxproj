@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{333E97E4-B601-4DF9-AE04-BEEAE0733286}</ProjectGuid>
-    <RootNamespace>Assesment</RootNamespace>
+    <ProjectGuid>{E7D1308A-47CE-4E32-BBD0-E3D5FFA371DB}</ProjectGuid>
+    <RootNamespace>My11CStrings</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -110,16 +110,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Battle.cpp" />
-    <ClCompile Include="level.cpp" />
+    <ClCompile Include="greeting.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="textanimations.cpp" />
+    <ClCompile Include="palindrome.cpp" />
+    <ClCompile Include="pigLatin.cpp" />
+    <ClCompile Include="titleGen.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Battle.h" />
-    <ClInclude Include="level.h" />
-    <ClInclude Include="moves.h" />
-    <ClInclude Include="textanimations.h" />
+    <ClInclude Include="greeting.h" />
+    <ClInclude Include="palindrome.h" />
+    <ClInclude Include="pigLatin.h" />
+    <ClInclude Include="titleGen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

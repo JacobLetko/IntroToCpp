@@ -10,6 +10,10 @@ struct stats
 	int intel;
 	int LVL;
 	int EXP;
+	int expneeded;
+	int boss;
+	int win;
+	int lose;
 	std::string playerClass;
 };
 
