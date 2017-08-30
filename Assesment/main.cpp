@@ -23,7 +23,7 @@ int menue(int x)
 	std::cout << "\n";
 	delay(20, " 4) quit game");
 	std::cout << "\n";
-	if (x >= player.boss*10 && player.boss != 0)
+	if (x >= player.boss*10)
 	{
 		delay(20, " You can fight the boss.");
 		std::cout << "\n";
@@ -43,7 +43,7 @@ void startUp()
 	std::cout << "\n";
 	delay(20, " 1) Wizzard");
 	std::cout << "\n";
-	delay(20, " 2) Rouge");
+	delay(20, " 2) Rogue");
 	std::cout << "\n";
 	delay(20, " 3) Warrior");
 	std::cout << "\n";
@@ -59,7 +59,7 @@ void startUp()
 	}
 	else if (answer == 2)
 	{
-		player.playerClass = " Rouge";
+		player.playerClass = " Rogue";
 		player.ATK = 10;
 		player.DEF = 2;
 		player.intel = 1;
@@ -85,9 +85,10 @@ void startUp()
 int main()
 {
 	player.EXP = 0;
-	player.boss = 0;
-	player.win = 0;
+	player.boss = 1;
+	player.win = 10;
 	player.lose = 0;
+	player.special = true;
 	
 	
 	/*int x; 
@@ -135,6 +136,9 @@ int main()
 		enemy.ATK = enemy.LVL + 3;
 		enemy.DEF = enemy.LVL + 1;
 		enemy.maxHP = enemy.LVL + 10;
+		enemy.slow = false;
+		enemy.miss = false;
+		enemy.drain = false;
 		enemy.remaingHP = enemy.maxHP;
 		enemy.playerClass = "enemey";
 
@@ -146,6 +150,7 @@ int main()
 		boss.playerClass = "boss";
 
 		player.expneeded = (player.LVL / 2) + player.LVL * 8;
+		player.special = true;
 		
 		std::cout << "\n" << std::endl;
 		option = menue(player.win);

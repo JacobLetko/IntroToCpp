@@ -110,6 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="everyOther.cpp" />
     <ClCompile Include="greeting.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="palindrome.cpp" />
@@ -117,6 +118,7 @@
     <ClCompile Include="titleGen.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="everyOther.h" />
     <ClInclude Include="greeting.h" />
     <ClInclude Include="palindrome.h" />
     <ClInclude Include="pigLatin.h" />

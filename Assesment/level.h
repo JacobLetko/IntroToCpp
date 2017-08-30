@@ -11,10 +11,16 @@ struct stats
 	int LVL;
 	int EXP;
 	int expneeded;
+	bool special;
 	int boss;
 	int win;
 	int lose;
 	std::string playerClass;
+
+	bool drain = false;
+	int drainAmount = 0;
+	bool slow = false;
+	bool miss = false;
 };
 
 void lvlUp(stats &player);

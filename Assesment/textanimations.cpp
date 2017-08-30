@@ -1,7 +1,6 @@
 #include <iostream>
 #include<windows.h>
 #include <thread>
-#include <chrono>
 #include <string>
 
 #include "textanimations.h"

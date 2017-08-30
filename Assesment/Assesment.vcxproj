@@ -113,6 +113,7 @@
     <ClCompile Include="Battle.cpp" />
     <ClCompile Include="level.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="moves.cpp" />
     <ClCompile Include="textanimations.cpp" />
   </ItemGroup>
   <ItemGroup>
