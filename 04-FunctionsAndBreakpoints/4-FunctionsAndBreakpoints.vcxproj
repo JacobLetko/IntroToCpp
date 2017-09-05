@@ -22,7 +22,6 @@
     <ProjectGuid>{BAD3E747-2F86-49F6-BF75-1671C83428E6}</ProjectGuid>
     <RootNamespace>My4FunctionsAndBreakpoints</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>04-FunctionsAndBreakpoints</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

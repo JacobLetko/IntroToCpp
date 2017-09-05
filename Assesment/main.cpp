@@ -52,24 +52,24 @@ void startUp()
 	if (answer == 1)
 	{
 		player.playerClass = " Wizzard";
-		player.ATK = 1;
-		player.DEF = 2;
+		player.ATK = 0;
+		player.DEF = 1;
 		player.intel = 10;
 		player.maxHP = 5;
 	}
 	else if (answer == 2)
 	{
 		player.playerClass = " Rogue";
-		player.ATK = 10;
-		player.DEF = 2;
-		player.intel = 1;
+		player.ATK = 7;
+		player.DEF = 1;
+		player.intel = 0;
 		player.maxHP = 5;
 	}
 	else if (answer == 3)
 	{
 		player.playerClass = " Warrior";
-		player.ATK = 5;
-		player.DEF = 3;
+		player.ATK = 6;
+		player.DEF = 2;
 		player.intel = 0;
 		player.maxHP = 5;
 	}
@@ -86,7 +86,7 @@ int main()
 {
 	player.EXP = 0;
 	player.boss = 1;
-	player.win = 10;
+	player.win = 0;
 	player.lose = 0;
 	player.special = true;
 	
@@ -148,8 +148,7 @@ int main()
 		boss.maxHP = boss.LVL + 15;
 		boss.remaingHP = boss.maxHP;
 		boss.playerClass = "boss";
-
-		player.expneeded = (player.LVL / 2) + player.LVL * 8;
+		player.expneeded = powers((player.LVL - 1)+4,2);
 		player.special = true;
 		
 		std::cout << "\n" << std::endl;
@@ -165,7 +164,7 @@ int main()
 		}
 		else if (option == 2)
 		{
-			Sleep(1500);
+			delay(500, "ZZZZZZZZZZZZZZZ ...");
 			std::cout << "\n";
 			delay(20, " You have regaind all health");
 			std::cout << "\n";

@@ -22,6 +22,7 @@
     <ProjectGuid>{317E0808-32D5-4DE7-9A03-F3BE81D45252}</ProjectGuid>
     <RootNamespace>My8structsAndPlainOIDataPOD</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>08-structsAndPlainOIData(POD)</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

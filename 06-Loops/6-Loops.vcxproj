@@ -19,10 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{BAD3E747-2F86-49F6-BF75-1671C83428E6}</ProjectGuid>
-    <RootNamespace>My4FunctionsAndBreakpoints</RootNamespace>
+    <ProjectGuid>{7EBCD1FE-782F-43F7-B31B-3C8165963875}</ProjectGuid>
+    <RootNamespace>My6Loops</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>04-FunctionsAndBreakpoints</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -111,19 +110,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ABC.cpp" />
+    <ClCompile Include="counting.cpp" />
+    <ClCompile Include="EvenOdd.cpp" />
+    <ClCompile Include="favThreeNum.cpp" />
+    <ClCompile Include="FibonacciSequence.cpp" />
+    <ClCompile Include="FizzBuzz.cpp" />
+    <ClCompile Include="gridGenerator.cpp" />
+    <ClCompile Include="HigherOrLower.cpp" />
+    <ClCompile Include="largAndSmallNum.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="printXY.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="clamp.h" />
-    <ClInclude Include="distance.h" />
-    <ClInclude Include="EstimatedTimeOfArrival.h" />
-    <ClInclude Include="FunctionPrototypes.h" />
-    <ClInclude Include="FunctionsDefinitions.h" />
-    <ClInclude Include="HighAndLowGame.h" />
-    <ClInclude Include="Max.h" />
-    <ClInclude Include="Min.h" />
-    <ClInclude Include="SumOfThreeInt.h" />
-    <ClInclude Include="ToUpperOrToLower.h" />
+    <ClInclude Include="ABC.h" />
+    <ClInclude Include="counting.h" />
+    <ClInclude Include="evenOdd.h" />
+    <ClInclude Include="favThreeNum.h" />
+    <ClInclude Include="FibonacciSequence.h" />
+    <ClInclude Include="FizzBuzz.h" />
+    <ClInclude Include="gridGenerator.h" />
+    <ClInclude Include="HigherOrLower.h" />
+    <ClInclude Include="largAndSmallNum.h" />
+    <ClInclude Include="printXY.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

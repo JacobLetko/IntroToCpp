@@ -28,3 +28,11 @@ void test(int x, int y) // test colors between ciertin numbers
 		std::cout << i << std::endl;
 	}
 }
+
+int powers(int x, int y)
+{
+	int ans = x;
+	for (int i = 1; i < y; i++)
+		ans = ans * x;
+	return ans;
+}
