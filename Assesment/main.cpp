@@ -1,6 +1,8 @@
 #include <iostream>
 #include <Windows.h>
 
+#include <mmsystem.h>
+
 #include "Battle.h"
 #include "level.h"
 #include "textanimations.h"
@@ -12,23 +14,16 @@ int menue(int x)
 {
 	int answer;
 	colorFunction(6);
-	delay(20, " What would you like to do?");
+	delaySkip(20, " What would you like to do?");
 	std::cout << "\n";
-	std::cout << "\n";
-	delay(20, " 1) fight");
-	std::cout << "\n";
-	delay(20, " 2) rest");
-	std::cout << "\n";
-	delay(20, " 3) stats");
-	std::cout << "\n";
-	delay(20, " 4) quit game");
-	std::cout << "\n";
+	delaySkip(20, " 1) fight");
+	delaySkip(20, " 2) rest");
+	delaySkip(20, " 3) stats");
+	delaySkip(20, " 4) quit game");
 	if (x >= player.boss*10)
 	{
-		delay(20, " You can fight the boss.");
-		std::cout << "\n";
-		delay(20, " If you want to fight him press 7");
-		std::cout << "\n";
+		delaySkip(20, " You can fight the boss.");
+		delaySkip(20, " If you want to fight him press 7");
 	}
 	std::cin >> answer;
 
@@ -39,14 +34,10 @@ void startUp()
 {
 	colorFunction(3);
 	int answer;
-	delay(20, " What class would you like?");
-	std::cout << "\n";
-	delay(20, " 1) Wizzard");
-	std::cout << "\n";
-	delay(20, " 2) Rogue");
-	std::cout << "\n";
-	delay(20, " 3) Warrior");
-	std::cout << "\n";
+	delaySkip(20, " What class would you like?");
+	delaySkip(20, " 1) Wizzard");
+	delaySkip(20, " 2) Rogue");
+	delaySkip(20, " 3) Warrior");
 	std::cin >> answer;
 
 	if (answer == 1)
@@ -54,7 +45,7 @@ void startUp()
 		player.playerClass = " Wizzard";
 		player.ATK = 0;
 		player.DEF = 1;
-		player.intel = 10;
+		player.intel = 8;
 		player.maxHP = 5;
 	}
 	else if (answer == 2)
@@ -68,7 +59,7 @@ void startUp()
 	else if (answer == 3)
 	{
 		player.playerClass = " Warrior";
-		player.ATK = 6;
+		player.ATK = 5;
 		player.DEF = 2;
 		player.intel = 0;
 		player.maxHP = 5;
@@ -105,33 +96,37 @@ int main()
 	
 	
 	colorFunction(4);
-	delay(100, "Welcome to the");
+	delaySkip(100, "Welcome to the");
 	colorFunction(4);
-	std::cout << "\n" << std::endl;
-	delay(20, "         (            )          " );
-	std::cout << "" << std::endl;
-	delay(20,"   (      )\\ )      ( /(   (      ");
-	std::cout << "" << std::endl;
-	delay(20, "   )\\    (()/( (    )\\())  )\\     ");
-	std::cout << "" << std::endl;
-	delay(20, "((((_)(   /(_)))\\  ((_)\\((((_)(   ");
-	std::cout << "" << std::endl;
-	delay(20, " )\ _ )\\ (_)) ((_)  _((_))\\ _ )\\  ");
-	std::cout << "" << std::endl;
-	delay(20, " (_)_\\(_)| _ \\| __|| \\| |(_)_\\(_) ");
-	std::cout << "" << std::endl;
-	delay(20, "  / _ \\  |   /| _| | .` | / _ \\   ");
-	std::cout << "" << std::endl;
-	delay(20, " /_/ \\_\\ |_|_\\|___||_|\\_|/_/ \\_\\  ");
-	std::cout << "\n" << std::endl;
+	delaySkip(20, "         (            )          " );
+	delaySkip(20,"   (      )\\ )      ( /(   (      ");
+	delaySkip(20, "   )\\    (()/( (    )\\())  )\\     ");
+	delaySkip(20, "((((_)(   /(_)))\\  ((_)\\((((_)(   ");
+	delaySkip(20, " )\ _ )\\ (_)) ((_)  _((_))\\ _ )\\  ");
+	delaySkip(20, " (_)_\\(_)| _ \\| __|| \\| |(_)_\\(_) ");
+	delaySkip(20, "  / _ \\  |   /| _| | .` | / _ \\   ");
+	delaySkip(20, " /_/ \\_\\ |_|_\\|___||_|\\_|/_/ \\_\\  ");
 
 	stats enemy;
 	stats boss;
 	
 	startUp();
 
+	colorFunction(7);
+	delaySkip(30, " You wake up in a unknown room with a cell door.");
+	delaySkip(30, " A gard notices you wake up and walks over to you.");
+	delaySkip(30, " \"Hey you finally awake are ya.\"");
+	delaySkip(30, " \"Well I hope you like your bed cause your gonna be here till you drop dead.\"");
+	delaySkip(30, " \"As you can guess this is a prison of a sort.\"");
+	delaySkip(30, " \"There are an endless line of people here all waiting to fight.\"");
+	delaySkip(30, " \"Dont worry you wont die from them you will die of old age or bordem\"");
+	delaySkip(30, " \"Have fun \"");
+	delaySkip(30, " The gaurd walks away");
+
+
 	while (play)
 	{
+		PlaySound(TEXT("fight.wav"), NULL, SND_ASYNC | SND_FILENAME | SND_LOOP);
 		enemy.LVL = player.LVL / 2 + 1;
 		enemy.ATK = enemy.LVL + 3;
 		enemy.DEF = enemy.LVL + 1;
@@ -164,10 +159,8 @@ int main()
 		}
 		else if (option == 2)
 		{
-			delay(500, "ZZZZZZZZZZZZZZZ ...");
-			std::cout << "\n";
-			delay(20, " You have regaind all health");
-			std::cout << "\n";
+			delaySkip(250, "ZZZZZZZZZZZZZZZ ...");
+			delaySkip(20, " You have regaind all health");
 			player.remaingHP = player.maxHP;
 		}
 		else if (option == 3)
@@ -179,6 +172,10 @@ int main()
 			fight(player, boss);
 			player.boss++;
 			player.EXP += player.expneeded / 2;
+			if (player.EXP >= player.expneeded)
+			{
+				lvlUp(player);
+			}
 		}
 		else if (option == 10)
 			status(enemy);

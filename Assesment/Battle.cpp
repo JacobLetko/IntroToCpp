@@ -74,12 +74,12 @@ void battle(stats &real, stats &enemy, int power)
 			x = 2;
 		for (int i = 0; i < x; i++)
 		{
-			if (power <= enemy.DEF && player.remaingHP > 0 && enemy.remaingHP > 0)
+			if (power <= enemy.DEF && player.remaingHP > 0 && enemy.remaingHP > 0 || player.ATK <= 0)
 			{
 				delay(20, " You did no damage!!!!");
 				std::cout << "\n";
 			}
-			else if (player.remaingHP > 0 && enemy.remaingHP > 0 && power > enemy.DEF)
+			else if (player.remaingHP > 0 && enemy.remaingHP > 0 && player.ATK > 0 && power > enemy.DEF)
 			{
 				if (enemy.drain == true)
 				{
@@ -108,7 +108,7 @@ void battle(stats &real, stats &enemy, int power)
 				enemy.remaingHP -= power - enemy.DEF + enemy.drainAmount;
 			}
 		}
-		else if (player.remaingHP > 0 && enemy.remaingHP > 0)
+		else if (player.remaingHP > 0 && enemy.remaingHP > 0 && enemy.ATK > 0)
 		{
 			player.remaingHP -= enemy.ATK - player.DEF;
 			delay(20, " You have taken "); std::cout << enemy.ATK - player.DEF; delay(20, " damage!!");
@@ -161,7 +161,7 @@ int fight(stats &real, stats enemy)
 		std::cout << "\n";
 		delay(20, " 4) defend");
 		std::cout << "\n";
-		if (player.special == true && player.LVL > 5)
+		if (player.special == true)
 		{
 			delay(20, " 5) special");
 			std::cout << "\n";
@@ -245,10 +245,12 @@ int fight(stats &real, stats enemy)
 		{
 			colorFunction(160);
 			delay(20, " You won");
+			delay(20, " You gained "); std::cout << enemy.LVL * 5; delaySkip(20, " XP");
 			colorFunction(0);
 			std::cout << "\n";
 			real.win++;
 			xp += enemy.LVL * 5;
+			
 		}
 		else if (player.remaingHP <= 0 && enemy.remaingHP > 0)
 		{

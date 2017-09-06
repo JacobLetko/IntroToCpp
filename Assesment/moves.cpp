@@ -50,7 +50,7 @@ int wizzard(stats &player, stats &enemy)
 	
 	std::cin >> ans;
 
-	if (ans == 1)
+	if (ans == 1 && player.LVL > 5)
 	{
 		colorFunction(59);
 		delay(20, " You healed your self");
@@ -59,7 +59,7 @@ int wizzard(stats &player, stats &enemy)
 		player.remaingHP = player.maxHP;
 		return 0;
 	}
-	else if (ans == 2)
+	else if (ans == 2 && player.LVL > 10)
 	{
 		colorFunction(59);
 		delay(20, " You burned the enemy");
@@ -67,7 +67,7 @@ int wizzard(stats &player, stats &enemy)
 		std::cout << "\n";
 		return 1;
 	}
-	else if (ans == 3)
+	else if (ans == 3 && player.LVL > 15)
 	{
 		colorFunction(59);
 		delay(20, " You slowed down the enemy");
@@ -75,7 +75,7 @@ int wizzard(stats &player, stats &enemy)
 		std::cout << "\n";
 		return 2;
 	}
-	else if (ans == 4)
+	else if (ans == 4 && player.LVL > 20)
 	{
 		colorFunction(59);
 		delay(20, " You used earth");
@@ -136,7 +136,7 @@ int rogue(stats &player, stats &enemy)
 
 	std::cin >> ans;
 
-	if (ans == 1)
+	if (ans == 1 && player.LVL > 5)
 	{
 		colorFunction(59);
 		delay(20, " The enemy misses you");
@@ -144,7 +144,7 @@ int rogue(stats &player, stats &enemy)
 		std::cout << "\n";
 		return 3;
 	}
-	else if (ans == 2)
+	else if (ans == 2 && player.LVL > 10)
 	{
 		colorFunction(59);
 		delay(20, " You attack twice");
@@ -152,7 +152,7 @@ int rogue(stats &player, stats &enemy)
 		std::cout << "\n";
 		return 4;
 	}
-	else if (ans == 3)
+	else if (ans == 3 && player.LVL > 15)
 	{
 		colorFunction(59);
 		delay(20, " You power attack without taking damage");
@@ -160,7 +160,7 @@ int rogue(stats &player, stats &enemy)
 		std::cout << "\n";
 		return 5;
 	}
-	else if (ans == 4)
+	else if (ans == 4 && player.LVL > 20)
 	{
 		colorFunction(59);
 		delay(20, " You posined the enemy");
@@ -220,7 +220,7 @@ int warrior(stats &player, stats &enemy)
 
 	std::cin >> ans;
 
-	if (ans == 1)
+	if (ans == 1 && player.LVL > 5)
 	{
 		colorFunction(59);
 		delay(20, " You used blood rush and do 50% more damage");
@@ -228,7 +228,7 @@ int warrior(stats &player, stats &enemy)
 		std::cout << "\n";
 		return 6;
 	}
-	else if (ans == 2)
+	else if (ans == 2 && player.LVL > 10)
 	{
 		colorFunction(59);
 		delay(20, " You scare the enemy");
@@ -236,7 +236,7 @@ int warrior(stats &player, stats &enemy)
 		std::cout << "\n";
 		return 7;
 	}
-	else if (ans == 3)
+	else if (ans == 3 && player.LVL > 15)
 	{
 		colorFunction(59);
 		delay(20, " You increase defense");
@@ -244,7 +244,7 @@ int warrior(stats &player, stats &enemy)
 		std::cout << "\n";
 		return 8;
 	}
-	else if (ans == 4)
+	else if (ans == 4 && player.LVL > 20)
 	{
 		colorFunction(59);
 		delay(20, " You cut the enemy");

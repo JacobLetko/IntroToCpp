@@ -19,6 +19,16 @@ void delay(int delay, std::string text)//prints each char slowly in a string
 	}
 }
 
+void delaySkip(int delay, std::string text)//prints each char slowly in a string
+{
+	for (int i = 0; i < text.length(); i++)
+	{
+		std::cout << text[i];
+		Sleep(delay);
+	}
+	std::cout << "\n";
+}
+
 void test(int x, int y) // test colors between ciertin numbers
 {
 	for (int i = x; i <= y; i++)
